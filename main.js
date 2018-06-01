@@ -17,13 +17,17 @@ function Card() {
     };
 
     this.deleteCard = function() {
+      //remove card from DOM
       let cardArea = document.getElementsByClassName("cardcontainer")[0];
       let cardDomElement = document.querySelector(`div[data-timestamp='${this.timestamp}']`);
       cardArea.removeChild(cardDomElement);
 
       //remove card from cardObject
-      //update counters etc.
-    }
+      delete cardObject[this.timestamp];
+
+      //to do: update counters etc., add confirmation modal
+    };
+
 }
 
 var createCard = function() {
