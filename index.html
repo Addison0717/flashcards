@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flashcards</title>
+
+    <!-- Font Awesome CDN -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <!-- Include main JS file -->
+    <script type="text/javascript" src="main.js"></script>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1>Flashy</h1>
+
+      <div class="controls">
+        <button type="button" name="button" onclick="addCard(createCard());">Add</button>
+      </div>
+
+      <!-- Flexbox! -->
+      <div class="cardcontainer">
+
+        <div class="card" data-timestamp="1">
+
+          <p>Side: `${card.status}`</p>
+
+          <p id="question">`${side1}`</p>
+
+          <p id="answer">Side 2</p>
+
+          <i class= "fa fa-pencil"></i>
+
+          <i class="fa fa-trashcan"></i>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+  </body>
+</html>
