@@ -1,27 +1,22 @@
-*, html {
-  /* font-family: "Abril Fatface","Open Sans"; */
-  /* height: 100px; */
-}
-
 body {
   height: 100%;
 }
 
 h1 {
   font-family: "Bowlby One SC","Abril Fatface";
-  /* font-size: 3em; */
 }
 
 p {
   margin: 15px;
 }
 
-.fa {
-  /* float: left; */
+svg {
+  margin-bottom: 5px;
 }
 
-.container {
-
+.info {
+  text-align: center;
+  font-family: "Open Sans", "Bowlby One SC","Abril Fatface";
 }
 
 .controls {
@@ -42,10 +37,7 @@ button {
   font-size: 3em;
   text-align: center;
   border-radius: 25px;
-  /* background: linear-gradient(to bottom right, #C9DAEA, #004777); */
   background: linear-gradient(to right, #ec4079 0%, #ec4079 10%, #00aa86 10%, #00aa86 30%, #004777 30%, #004777 70%, #00aa86 70%, #00aa86 90%, #ec4079 90%, #ec4079 100% );
-  /* background-color: #c9daea; */
-  /* background-color: #004777; */
   color: white;
   margin-bottom: 30px;
 }
@@ -61,7 +53,9 @@ button {
 .card {
   padding: 5px;
   margin: 20px;
-  height: 30vh;
+  /* height: 40vh; */
+  /* The below will work but will change all cards */
+  height: auto;
   font-family: "Open Sans";
   font-weight: bold;
   font-size: 1.2em;
