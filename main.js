@@ -74,12 +74,9 @@ cardElement.innerHTML =
   cardObject[card.timestamp] = card;
 };
 
-// var getCardContent = function() {
-//   console.log("get card content");
-//   $('.card').click(function(event) {
-//     console.log("test");
-//     event.stopPropagation();
-//     //document.execCommand("backColor=#fff", false, null);
-//   });
-// }
-// //Determines behavior of questions and answers when editing the cards.
+var counter = function(){
+  if (Object.keys(cardObject).length === 3) {
+    alert("WOW!! 10 cards! You are really learning :-)");
+  }
+};
+
