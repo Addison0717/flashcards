@@ -1,0 +1,88 @@
+*, html {
+  /* font-family: "Abril Fatface","Open Sans"; */
+  /* height: 100px; */
+}
+
+body {
+  height: 100%;
+}
+
+h1 {
+  font-family: "Bowlby One SC","Abril Fatface";
+  /* font-size: 3em; */
+}
+
+p {
+  margin: 15px;
+}
+
+.fa {
+  /* float: left; */
+}
+
+.container {
+
+}
+
+.controls {
+  text-align: center;
+}
+
+button {
+  background-color: #00aa86;
+  border: 5px solid #027a61;
+  border-radius: 25px;
+  color: white;
+  padding: 25px;
+  font-family: "Bowlby One SC","Open Sans";
+  font-size: 20px;
+}
+
+#heading {
+  font-size: 3em;
+  text-align: center;
+  border-radius: 25px;
+  /* background: linear-gradient(to bottom right, #C9DAEA, #004777); */
+  background: linear-gradient(to right, #ec4079 0%, #ec4079 10%, #00aa86 10%, #00aa86 30%, #004777 30%, #004777 70%, #00aa86 70%, #00aa86 90%, #ec4079 90%, #ec4079 100% );
+  /* background-color: #c9daea; */
+  /* background-color: #004777; */
+  color: white;
+  margin-bottom: 30px;
+}
+
+.cardcontainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.card {
+  padding: 5px;
+  margin: 20px;
+  height: 30vh;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  width: 30%;
+  border: 5px solid #027a61;
+  border-radius: 25px;
+  background-color: #00aa86;
+  color: white;
+}
+
+.footer {
+  background-color: #ec4079;
+  border-radius: 25px;
+  height: 80px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Bowlby One SC","Abril Fatface";
+}
+
+#footertext {
+  padding-top: 25px;
+}
