@@ -13,10 +13,14 @@ function Card() {
         this.cardStatus = 2;
         $(`div[data-timestamp='${this.timestamp}']`).children('#answer').css( 'display', "block" );
         $(`div[data-timestamp='${this.timestamp}']`).children('#question').css( 'display', "none" );
+        $(`div[data-timestamp='${this.timestamp}']`).children('p')[0].innerHTML = "Side: 2";
+
       } else {
         this.cardStatus = 1;
         $(`div[data-timestamp='${this.timestamp}']`).children('#question').css( 'display', "block" );
         $(`div[data-timestamp='${this.timestamp}']`).children('#answer').css( 'display', "none" );
+        $(`div[data-timestamp='${this.timestamp}']`).children('p')[0].innerHTML = "Side: 1";
+
       }
     };
 
