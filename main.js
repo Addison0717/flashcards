@@ -34,12 +34,10 @@ function Card() {
       this.side2 = prompt("Edit the new answer: ");
 
       //Update html
-
       let cardDomElement = document.querySelector(`div[data-timestamp='${this.timestamp}']`);
       cardDomElement.children.question.innerHTML = this.side1;
       cardDomElement.children.answer.innerHTML = this.side2;
     }
-
 }
 
 var createCard = function() {
@@ -52,12 +50,17 @@ var addCard = function(card){
 var cardElement = document.createElement("div");
 cardElement.className="card";
 cardElement.setAttribute("data-timestamp", card.timestamp);
+cardElement.addEventListener('click', function() {
+  card.flipCard();
+});
+
 cardElement.innerHTML =
       `<p>Side: ${card.cardStatus}</p>
       <p id="question">${card.side1}</p>
       <p id="answer">${card.side2}</p>
-      <i class="fa fa-pencil-alt"></i>
+      <i class="fa fa-pencil-alt" onclick="cardObject[${card.timestamp}].editCard()"></i>
       <i class="fa fa-trash-alt"></i>`;
+
   var cardArea = document.getElementsByClassName("cardcontainer")[0];
   cardArea.appendChild(cardElement);
   // cardArray.push(card);
@@ -65,7 +68,16 @@ cardElement.innerHTML =
 };
 
 //For debugging only!
-
 document.addEventListener('DOMContentLoaded', function() {
   addCard(createCard())
 });
+
+// let fragment = document.createRange().createContextualFragment(cardInnerHTMLString);
+// let editIcon = document.createElement('i');
+// editIcon.className = "fa fa-pencil-alt";
+// editIcon.addEventListener("click", function() {
+//   card.editCard();
+//   console.log("edit card: " + card.timestamp);
+// }, false);
+// fragment.append(editIcon);
+// cardElement.appendChild(fragment);

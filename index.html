@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Add Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Abril+Fatface|Open+Sans" rel="stylesheet">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   </head>
   <body>
@@ -29,15 +31,13 @@
 
         <div class="card" data-timestamp="1">
 
-          <p>Side: `${card.status}`</p>
+          <p id="question">Welcome to Flashy! Feel free to add or delete your own cards to help you study.</p>
 
-          <p id="question">`${side1}`</p>
+          <p id="answer">Looks like you already know how to work with flashcards ;)</p>
 
-          <p id="answer">Side 2</p>
+          <i class="fa fa-pencil-alt"></i>
 
-          <i class= "fa fa-pencil"></i>
-
-          <i class="fa fa-trashcan"></i>
+          <i class="fa fa-trash-alt"></i>
 
         </div>
 
