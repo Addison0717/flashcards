@@ -20,7 +20,6 @@ function Card() {
         $(`div[data-timestamp='${this.timestamp}']`).children('#question').css( 'display', "block" );
         $(`div[data-timestamp='${this.timestamp}']`).children('#answer').css( 'display', "none" );
         $(`div[data-timestamp='${this.timestamp}']`).children('p')[0].innerHTML = "Side: 1";
-
       }
     };
 
@@ -64,8 +63,8 @@ cardElement.addEventListener('click', function() {
 
 cardElement.innerHTML =
       `<p>Side: ${card.cardStatus}</p>
-      <p id="question">${card.side1}</p>
-      <p id="answer" style="display:none;">${card.side2}</p>
+      <p id="question" contenteditable="true">${card.side1}</p>
+      <p id="answer" style="display:none;" contenteditable="true">${card.side2}</p>
       <i class="fa fa-pencil-alt" onclick="cardObject[${card.timestamp}].editCard()"></i>
       <i class="fa fa-trash-alt" onclick="cardObject[${card.timestamp}].deleteCard()"></i>`;
 
@@ -75,7 +74,12 @@ cardElement.innerHTML =
   cardObject[card.timestamp] = card;
 };
 
-//For debugging only!
-document.addEventListener('DOMContentLoaded', function() {
-  addCard(createCard())
-});
+// var getCardContent = function() {
+//   console.log("get card content");
+//   $('.card').click(function(event) {
+//     console.log("test");
+//     event.stopPropagation();
+//     //document.execCommand("backColor=#fff", false, null);
+//   });
+// }
+// //Determines behavior of questions and answers when editing the cards.
