@@ -3,8 +3,8 @@ var cardObject = {};
 
 function Card() {
     let ts = new Date();
-    this.side1 = prompt("Question:");
-    this.side2 = prompt("Answer:");
+    this.side1 = prompt("Please enter a Question:");
+    this.side2 = prompt("Please enter an Answer:");
     this.timestamp = ts.getTime(); // Add timestamp dynamically later
     this.cardStatus = 1; // Add status later
 
