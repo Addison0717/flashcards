@@ -11,8 +11,12 @@ function Card() {
     this.flipCard = function() {
       if (this.cardStatus === 1) {
         this.cardStatus = 2;
+        $(`div[data-timestamp='${this.timestamp}']`).children('#answer').css( 'display', "block" );
+        $(`div[data-timestamp='${this.timestamp}']`).children('#question').css( 'display', "none" );
       } else {
         this.cardStatus = 1;
+        $(`div[data-timestamp='${this.timestamp}']`).children('#question').css( 'display', "block" );
+        $(`div[data-timestamp='${this.timestamp}']`).children('#answer').css( 'display', "none" );
       }
     };
 
