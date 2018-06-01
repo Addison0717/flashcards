@@ -15,6 +15,15 @@ function Card() {
         this.cardStatus = 1;
       }
     };
+
+    this.deleteCard = function() {
+      let cardArea = document.getElementsByClassName("cardcontainer")[0];
+      let cardDomElement = document.querySelector(`div[data-timestamp='${this.timestamp}']`);
+      cardArea.removeChild(cardDomElement);
+
+      //remove card from cardObject
+      //update counters etc.
+    }
 }
 
 var createCard = function() {
@@ -26,7 +35,7 @@ var addCard = function(card){
 
 var cardElement = document.createElement("div");
 cardElement.className="card";
-cardElement.setAttribute("data-timestamp", card.cardStatus);
+cardElement.setAttribute("data-timestamp", card.timestamp);
 cardElement.innerHTML =
 
       `<p>Side: ${card.cardStatus}</p>
