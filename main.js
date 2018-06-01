@@ -28,6 +28,18 @@ function Card() {
       //to do: update counters etc., add confirmation modal
     };
 
+    this.editCard = function() {
+      //Change questions and answers in cardObject.
+      this.side1 = prompt("Edit the new question: ");
+      this.side2 = prompt("Edit the new answer: ");
+
+      //Update html
+
+      let cardDomElement = document.querySelector(`div[data-timestamp='${this.timestamp}']`);
+      cardDomElement.children.question.innerHTML = this.side1;
+      cardDomElement.children.answer.innerHTML = this.side2;
+    }
+
 }
 
 var createCard = function() {
@@ -41,21 +53,19 @@ var cardElement = document.createElement("div");
 cardElement.className="card";
 cardElement.setAttribute("data-timestamp", card.timestamp);
 cardElement.innerHTML =
-
       `<p>Side: ${card.cardStatus}</p>
-
       <p id="question">${card.side1}</p>
-
       <p id="answer">${card.side2}</p>
-
-      <i class="fas fa-pencil-alt"></i>
-
-      <i class="far fa-trash-alt"></i>`;
-
-
-var cardArea = document.getElementsByClassName("cardcontainer")[0];
-cardArea.appendChild(cardElement);
-// cardArray.push(card);
-cardObject[card.timestamp] = card;
-
+      <i class="fa fa-pencil-alt"></i>
+      <i class="fa fa-trash-alt"></i>`;
+  var cardArea = document.getElementsByClassName("cardcontainer")[0];
+  cardArea.appendChild(cardElement);
+  // cardArray.push(card);
+  cardObject[card.timestamp] = card;
 };
+
+//For debugging only!
+
+document.addEventListener('DOMContentLoaded', function() {
+  addCard(createCard())
+});
