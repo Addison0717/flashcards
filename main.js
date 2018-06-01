@@ -17,8 +17,8 @@ function Card() {
     };
 }
 
-var createCard = function(variable) {
-  variable = new Card();
+var createCard = function() {
+  let variable = new Card();
   return variable;
 };
 
