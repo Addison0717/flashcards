@@ -63,7 +63,7 @@ cardElement.innerHTML =
       <p id="question">${card.side1}</p>
       <p id="answer">${card.side2}</p>
       <i class="fa fa-pencil-alt" onclick="cardObject[${card.timestamp}].editCard()"></i>
-      <i class="fa fa-trash-alt"></i>`;
+      <i class="fa fa-trash-alt" onclick="cardObject[${card.timestamp}].deleteCard()"></i>`;
 
   var cardArea = document.getElementsByClassName("cardcontainer")[0];
   cardArea.appendChild(cardElement);
@@ -75,13 +75,3 @@ cardElement.innerHTML =
 document.addEventListener('DOMContentLoaded', function() {
   addCard(createCard())
 });
-
-// let fragment = document.createRange().createContextualFragment(cardInnerHTMLString);
-// let editIcon = document.createElement('i');
-// editIcon.className = "fa fa-pencil-alt";
-// editIcon.addEventListener("click", function() {
-//   card.editCard();
-//   console.log("edit card: " + card.timestamp);
-// }, false);
-// fragment.append(editIcon);
-// cardElement.appendChild(fragment);
