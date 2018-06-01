@@ -1,4 +1,4 @@
-User Stories:
+cUser Stories:
 -Programmer
 The user will go to index.html, there will be one flashcard with instructions,
 and there will be a button to add a new flashcard, and when the user clicks the add button, there will be two
@@ -51,12 +51,12 @@ Needs:
 
 
 Functions:
-  -Create
-  -Edit
-  -Turn
+  -Create - yes
+  -Edit - yes -> needs improvement DOM
+  -Turn - Yes! -> Needs animation
     -Change status
-  -Delete (in the flashcard object)
-  -Init
+  -Delete (in the flashcard object) - yes
+  -Init - to be investigated
 
 
 Wants:
