@@ -61,7 +61,7 @@ cardElement.addEventListener('click', function() {
 cardElement.innerHTML =
       `<p>Side: ${card.cardStatus}</p>
       <p id="question">${card.side1}</p>
-      <p id="answer">${card.side2}</p>
+      <p id="answer" style="display:none;">${card.side2}</p>
       <i class="fa fa-pencil-alt" onclick="cardObject[${card.timestamp}].editCard()"></i>
       <i class="fa fa-trash-alt" onclick="cardObject[${card.timestamp}].deleteCard()"></i>`;
 
