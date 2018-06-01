@@ -76,7 +76,7 @@ cardElement.innerHTML =
 
 var counter = function(){
   if (Object.keys(cardObject).length === 3) {
-    alert("WOW!! 10 cards! You are really learning :-)");
+    alert("WOW!! 3 cards! You are really learning :-)");
   }
 };
 
